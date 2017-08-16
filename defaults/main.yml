@@ -1,0 +1,6 @@
+---
+# defaults file for apt
+
+apt_src_list_manage: true
+
+apt_stretch_manage: true
