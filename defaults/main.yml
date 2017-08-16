@@ -5,3 +5,6 @@ apt_src_list_manage: true
 apt_purge_src_list_file: true
 
 apt_stretch_manage: true
+
+apt_default_pref_path: '/etc/apt/preferences.d/default.pref'
+apt_default_pref_tpl: 'etc/apt/preferences.d/default.pref.j2'

@@ -1,6 +1,12 @@
 ---
 # tasks file for apt
 
+# Default preferences file
+- name: CONFIG default preferences
+  template:
+    src: '{{ apt_default_pref_tpl }}'
+    dest: '{{ apt_default_pref_path }}'
+
 # Sources list
 ## Purge sources.list file
 - name: CONFIG remove sources.list file

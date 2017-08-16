@@ -4,6 +4,8 @@
 2. [Role Variables](#role-variables)
 3. [Example Playbook](#example-playbook)
 4. [Configuration](#configuration)
+    * [Sources List](#sources-list)
+    * [Preferences](#preferences)
 5. [Development](#development)
 6. [License](#license)
 7. [Author Information](#author-information)
@@ -17,6 +19,8 @@ Manage APT repos, preferences and configuration for IPR's servers.
 * **apt_src_list_manage** : If apt sources list files should be managed [default : `true`].
 * **apt_purge_src_list_file** : If the default sources.file must be absent [default : `true`].
 * **apt_stretch_manage** : If Stretch configuration should be managed [default : `true`].
+* **apt_default_pref_path** : Path to set the default preferences file for all repositories [default : `'/etc/apt/preferences.d/default.pref'`].
+* **apt_default_pref_tpl** : Template used to generate the previous config file [default : `'etc/apt/preferences.d/default.pref.j2'`].
 
 ## Example Playbook
 
@@ -36,6 +40,12 @@ Manage Debian's sources.list :
 * Remove the default `/etc/apt/sources.list` file.
 * Add Stretch repositories.
 * Update Apt if any repositories modifications.
+
+### Preferences
+
+* Set the preferences for all repositories, default to :
+  - Stretch - 310.
+  - Stretch Backports - 300.
 
 ## Development
 
