@@ -15,6 +15,7 @@ Manage APT repos, preferences and configuration for IPR's servers.
 ## Role Variables
 
 * **apt_src_list_manage** : If apt sources list files should be managed [default : `true`].
+* **apt_purge_src_list_file** : If the default sources.file must be absent [default : `true`].
 * **apt_stretch_manage** : If Stretch configuration should be managed [default : `true`].
 
 ## Example Playbook
@@ -32,6 +33,7 @@ Manage APT repos, preferences and configuration for IPR's servers.
 ### Sources List
 
 Manage Debian's sources.list :
+* Remove the default `/etc/apt/sources.list` file.
 * Add Stretch repositories.
 * Update Apt if any repositories modifications.
 

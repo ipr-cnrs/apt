@@ -2,5 +2,6 @@
 # defaults file for apt
 
 apt_src_list_manage: true
+apt_purge_src_list_file: true
 
 apt_stretch_manage: true

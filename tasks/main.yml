@@ -2,6 +2,14 @@
 # tasks file for apt
 
 # Sources list
+## Purge sources.list file
+- name: CONFIG remove sources.list file
+  file:
+    path: /etc/apt/sources.list
+    state: absent
+  notify: aptitude update
+  when: apt_purge_src_list_file
+
 ## Stretch
 - name: CONFIG stretch official sources.list
   apt_repository:
