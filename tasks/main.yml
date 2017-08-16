@@ -11,6 +11,7 @@
   with_items:
     - deb
     - deb-src
+  notify: aptitude update
   when: apt_src_list_manage and apt_stretch_manage
 
 - name: CONFIG stretch backports sources.list
@@ -20,4 +21,5 @@
     update_cache: no
   with_items:
     - backports
+  notify: aptitude update
   when: apt_src_list_manage and apt_stretch_manage

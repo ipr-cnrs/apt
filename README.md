@@ -33,6 +33,7 @@ Manage APT repos, preferences and configuration for IPR's servers.
 
 Manage Debian's sources.list :
 * Add Stretch repositories.
+* Update Apt if any repositories modifications.
 
 ## Development
 
