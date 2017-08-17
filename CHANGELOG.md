@@ -8,3 +8,4 @@
 * Manage default preferences file.
 * Ensure to install some additionnals tools (aptitude,…).
 * Ensure to remove really useless packages (laptop-detect, tasksel,…).
+* Manage periodic config file.

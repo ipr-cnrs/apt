@@ -4,6 +4,7 @@
 2. [Role Variables](#role-variables)
 3. [Example Playbook](#example-playbook)
 4. [Configuration](#configuration)
+    * [APT Configuration](#apt-configuration)
     * [Sources List](#sources-list)
     * [Preferences](#preferences)
     * [Tools](#tools)
@@ -17,6 +18,9 @@ Manage APT repos, preferences and configuration for IPR's servers.
 
 ## Role Variables
 
+* **apt_conf_update_pkg_lists** : Period of automatic repositories update in days [default : `1`].
+* **apt_conf_download_upgradeable_pkg** : Period of automatic download of upgradeable packages in days [default : `1`].
+* **apt_conf_auto_clean_interval** : Period of automatic clean of no longer available packages [default : `0`].
 * **apt_src_list_manage** : If apt sources list files should be managed [default : `true`].
 * **apt_purge_src_list_file** : If the default sources.file must be absent [default : `true`].
 * **apt_stretch_manage** : If Stretch configuration should be managed [default : `true`].
@@ -41,8 +45,10 @@ Manage APT repos, preferences and configuration for IPR's servers.
 
 ## Configuration
 
-### Sources List
+### APT Configuration
+- Set periodic actions.
 
+### Sources List
 Manage Debian's sources.list :
 * Remove the default `/etc/apt/sources.list` file.
 * Add Stretch repositories.

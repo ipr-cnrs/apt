@@ -1,0 +1,10 @@
+# {{ ansible_managed }}
+
+# Do "apt-get update" automatically every n-days (0=disable)
+APT::Periodic::Update-Package-Lists "{{ apt_conf_update_pkg_lists }}";
+
+# Do "apt-get upgrade --download-only" every n-days (0=disable)
+APT::Periodic::Download-Upgradeable-Packages "{{ apt_conf_download_upgradeable_pkg }}";
+
+# Do "apt-get autoclean" every n-days (0=disable)
+APT::Periodic::AutocleanInterval "{{ apt_conf_auto_clean_interval }}";

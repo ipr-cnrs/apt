@@ -1,6 +1,10 @@
 ---
 # defaults file for apt
 
+apt_conf_update_pkg_lists: 1
+apt_conf_download_upgradeable_pkg: 1
+apt_conf_auto_clean_interval: 0
+
 apt_src_list_manage: true
 apt_purge_src_list_file: true
 

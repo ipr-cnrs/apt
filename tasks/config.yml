@@ -1,0 +1,12 @@
+---
+# tasks file for config
+
+- name: CONFIG APT
+  template:
+    src: "{{ item }}.j2"
+    dest: "/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - "etc/apt/apt.conf.d/10periodic"

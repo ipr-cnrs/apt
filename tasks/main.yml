@@ -1,6 +1,13 @@
 ---
 # tasks file for apt
 
+- include: config.yml
+  tags:
+    - system
+    - apt
+    - config
+    - apt-config
+
 - include: preferences.yml
   tags:
     - system
