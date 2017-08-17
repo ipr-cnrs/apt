@@ -25,6 +25,9 @@ Manage APT repos, preferences and configuration for IPR's servers.
 * **apt_tools_list** : The list of additionnals tools to install [default [see below](#tools)].
 * **apt_tools_state** : State of new tools [default : `installed`].
 * **apt_tools_manage** : If those tools should be managed by the role [default : `true`].
+* **apt_old_pkg_list** : The list of totally useless packages for a production server [default [see below](#tools)].
+* **apt_old_pkg_state** : State of old packages [default : `absent`].
+* **apt_old_pkg_manage** : If those old packages should be managed by the role [default : `true`].
 
 ## Example Playbook
 
@@ -51,8 +54,11 @@ Manage Debian's sources.list :
   - Stretch Backports - 500.
 
 ### Tools
-Ensure to install :
+- Ensure to install :
   * aptitude (better than `apt` to resolve dependencies issues)
+- Ensure to remove really useless packages from a default installation :
+  * laptop-detect (if a server is a laptop…)
+  * tasksel (simple interface)
 
 ## Development
 
