@@ -4,6 +4,14 @@
 apt_conf_update_pkg_lists: 1
 apt_conf_download_upgradeable_pkg: 1
 apt_conf_auto_clean_interval: 0
+apt_conf_purge_list:
+  - 00trustcdrom
+  - 01autoremove
+  - 01autoremove-kernels
+  - 15hobbit-plugins-update-stamp
+  - 20listchanges
+  - 70debconf
+apt_conf_purge_manage: true
 
 apt_src_list_manage: true
 apt_purge_src_list_file: true

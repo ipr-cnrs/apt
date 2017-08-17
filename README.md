@@ -21,6 +21,8 @@ Manage APT repos, preferences and configuration for IPR's servers.
 * **apt_conf_update_pkg_lists** : Period of automatic repositories update in days [default : `1`].
 * **apt_conf_download_upgradeable_pkg** : Period of automatic download of upgradeable packages in days [default : `1`].
 * **apt_conf_auto_clean_interval** : Period of automatic clean of no longer available packages [default : `0`].
+* **apt_conf_purge_list** : The list of default APT configuration files sets by differents packages.
+* **apt_conf_purge_manage** : If the purge of default configuration should be managed [default : `true`].
 * **apt_src_list_manage** : If apt sources list files should be managed [default : `true`].
 * **apt_purge_src_list_file** : If the default sources.file must be absent [default : `true`].
 * **apt_stretch_manage** : If Stretch configuration should be managed [default : `true`].
@@ -47,6 +49,7 @@ Manage APT repos, preferences and configuration for IPR's servers.
 
 ### APT Configuration
 - Set periodic actions.
+- Purge default configuration files sets by others apps.
 
 ### Sources List
 Manage Debian's sources.list :
