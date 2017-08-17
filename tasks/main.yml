@@ -1,58 +1,22 @@
 ---
 # tasks file for apt
 
-# Default preferences file
-- name: CONFIG default preferences
-  template:
-    src: '{{ apt_default_pref_tpl }}'
-    dest: '{{ apt_default_pref_path }}'
+- include: preferences.yml
+  tags:
+    - system
+    - apt
+    - preferences
+    - apt-manage
 
-# Sources list {{{
-## Purge sources.list file
-- name: CONFIG remove sources.list file
-  file:
-    path: /etc/apt/sources.list
-    state: absent
-  notify: aptitude update
-  when: apt_purge_src_list_file
+- include: repositories.yml
+  tags:
+    - system
+    - apt
+    - repository
+    - apt-manage
 
-## Stretch
-- name: CONFIG stretch official sources.list
-  apt_repository:
-    repo: "{{ item }} http://httpredir.debian.org/debian/ stretch main contrib non-free"
-    filename: stretch
-    update_cache: no
-  with_items:
-    - deb
-    - deb-src
-  notify: aptitude update
-  when: apt_src_list_manage and apt_stretch_manage
-
-- name: CONFIG stretch backports sources.list
-  apt_repository:
-    repo: "deb http://httpredir.debian.org/debian/ stretch-{{ item }} main contrib non-free"
-    filename: stretch.bpo
-    update_cache: no
-  with_items:
-    - backports
-  notify: aptitude update
-  when: apt_src_list_manage and apt_stretch_manage
-# }}}
-
-# Packages {{{
-- name: Ensure useful tools packages
-  apt:
-    name: '{{ item }}'
-    state: '{{ apt_tools_state }}'
-  with_items:
-    - '{{ apt_tools_list }}'
-  when: apt_tools_manage
-
-- name: Ensure to purge useless packages
-  apt:
-    name: '{{ item }}'
-    state: '{{ apt_old_pkg_state }}'
-  with_items:
-    - '{{ apt_old_pkg_list }}'
-  when: apt_old_pkg_manage
-# }}}
+- include: packages.yml
+  tags:
+    - system
+    - apt
+    - packages

@@ -1,0 +1,19 @@
+---
+# tasks file for packages
+
+# Packages
+- name: Ensure useful tools packages
+  apt:
+    name: '{{ item }}'
+    state: '{{ apt_tools_state }}'
+  with_items:
+    - '{{ apt_tools_list }}'
+  when: apt_tools_manage
+
+- name: Ensure to purge useless packages
+  apt:
+    name: '{{ item }}'
+    state: '{{ apt_old_pkg_state }}'
+  with_items:
+    - '{{ apt_old_pkg_list }}'
+  when: apt_old_pkg_manage
