@@ -6,6 +6,7 @@
 4. [Configuration](#configuration)
     * [Sources List](#sources-list)
     * [Preferences](#preferences)
+    * [Tools](#tools)
 5. [Development](#development)
 6. [License](#license)
 7. [Author Information](#author-information)
@@ -19,8 +20,11 @@ Manage APT repos, preferences and configuration for IPR's servers.
 * **apt_src_list_manage** : If apt sources list files should be managed [default : `true`].
 * **apt_purge_src_list_file** : If the default sources.file must be absent [default : `true`].
 * **apt_stretch_manage** : If Stretch configuration should be managed [default : `true`].
-* **apt_default_pref_path** : Path to set the default preferences file for all repositories [default : `'/etc/apt/preferences.d/default.pref'`].
-* **apt_default_pref_tpl** : Template used to generate the previous config file [default : `'etc/apt/preferences.d/default.pref.j2'`].
+* **apt_default_pref_path** : Path to set the default preferences file for all repositories [default : `/etc/apt/preferences.d/default.pref`].
+* **apt_default_pref_tpl** : Template used to generate the previous config file [default : `etc/apt/preferences.d/default.pref.j2`].
+* **apt_tools_list** : The list of additionnals tools to install [default [see below](#tools)].
+* **apt_tools_state** : State of new tools [default : `installed`].
+* **apt_tools_manage** : If those tools should be managed by the role [default : `true`].
 
 ## Example Playbook
 
@@ -42,10 +46,13 @@ Manage Debian's sources.list :
 * Update Apt if any repositories modifications.
 
 ### Preferences
-
 * Set the preferences for all repositories, default to :
   - Stretch - 510.
   - Stretch Backports - 500.
+
+### Tools
+Ensure to install :
+  * aptitude (better than `apt` to resolve dependencies issues)
 
 ## Development
 

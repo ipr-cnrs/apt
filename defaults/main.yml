@@ -8,3 +8,8 @@ apt_stretch_manage: true
 
 apt_default_pref_path: '/etc/apt/preferences.d/default.pref'
 apt_default_pref_tpl: 'etc/apt/preferences.d/default.pref.j2'
+
+apt_tools_list:
+  - aptitude
+apt_tools_state: 'installed'
+apt_tools_manage: true

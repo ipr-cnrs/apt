@@ -7,7 +7,7 @@
     src: '{{ apt_default_pref_tpl }}'
     dest: '{{ apt_default_pref_path }}'
 
-# Sources list
+# Sources list {{{
 ## Purge sources.list file
 - name: CONFIG remove sources.list file
   file:
@@ -37,3 +37,13 @@
     - backports
   notify: aptitude update
   when: apt_src_list_manage and apt_stretch_manage
+# }}}
+
+# Packages
+- name: Ensure useful tools packages
+  apt:
+    name: '{{ item }}'
+    state: '{{ apt_tools_state }}'
+  with_items:
+    - '{{ apt_tools_list }}'
+  when: apt_tools_manage

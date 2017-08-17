@@ -6,3 +6,4 @@
 * Manage Stretch repositories.
 * Update Apt if any repositories modifications.
 * Manage default preferences file.
+* Ensure to install some additionnals tools (aptitude,…).
