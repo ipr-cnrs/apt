@@ -44,8 +44,8 @@ Manage Debian's sources.list :
 ### Preferences
 
 * Set the preferences for all repositories, default to :
-  - Stretch - 310.
-  - Stretch Backports - 300.
+  - Stretch - 510.
+  - Stretch Backports - 500.
 
 ## Development
 
