@@ -48,6 +48,7 @@ Manage APT repos, preferences and configuration for IPR's servers.
 ## Configuration
 
 ### APT Configuration
+- Ensure to never remove some packages pattern.
 - Set general APT configurations.
 - Set periodic actions.
 - Set dpkg default values.
