@@ -9,6 +9,7 @@
     group: root
     mode: 0644
   with_items:
+    - "etc/apt/apt.conf.d/10general"
     - "etc/apt/apt.conf.d/10periodic"
 
 - name: CONFIG dpkg

@@ -1,0 +1,10 @@
+# {{ ansible_managed }}
+
+APT
+{
+	APT::autoclean       "1";
+	APT::clean-installed "1";
+}
+
+# The date of the last successful repositories update
+APT::Update::Post-Invoke {"touch /var/lib/apt/periodic/update-success-stamp 2>/dev/null || true";};
