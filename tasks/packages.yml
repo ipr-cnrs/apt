@@ -2,7 +2,7 @@
 # tasks file for packages
 
 # Packages
-- name: Ensure useful tools packages
+- name: INSTALL useful tools packages
   apt:
     name: '{{ item }}'
     state: '{{ apt_tools_state }}'
@@ -10,7 +10,13 @@
     - '{{ apt_tools_list }}'
   when: apt_tools_manage
 
-- name: Ensure to purge useless packages
+- name: INSTALL unattended-upgrades
+  apt:
+    pkg: "unattended-upgrades"
+    state: "{{ 'latest' if apt_unattended_upgrades else 'absent' }}"
+  when: apt_unattended_upgrades
+
+- name: INSTALL purge useless packages
   apt:
     name: '{{ item }}'
     state: '{{ apt_old_pkg_state }}'

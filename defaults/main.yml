@@ -1,6 +1,7 @@
 ---
 # defaults file for apt
 
+# configuration
 apt_conf_update_pkg_lists: 1
 apt_conf_download_upgradeable_pkg: 1
 apt_conf_auto_clean_interval: 0
@@ -11,14 +12,17 @@ apt_conf_purge_list:
   - 70debconf
 apt_conf_purge_manage: true
 
+# repositories
 apt_src_list_manage: true
 apt_purge_src_list_file: true
 
 apt_stretch_manage: true
 
+# preferences
 apt_default_pref_path: '/etc/apt/preferences.d/default.pref'
 apt_default_pref_tpl: 'etc/apt/preferences.d/default.pref.j2'
 
+# packages
 apt_tools_list:
   - aptitude
 apt_tools_state: 'installed'
@@ -28,3 +32,6 @@ apt_old_pkg_list:
   - tasksel
 apt_old_pkg_state: 'absent'
 apt_old_pkg_manage: true
+
+# unattended-upgrades
+apt_unattended_upgrades: yes
