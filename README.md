@@ -49,6 +49,7 @@ Manage APT repos, preferences and configuration for IPR's servers.
 
 ### APT Configuration
 - Set periodic actions.
+- Set dpkg default values.
 - Purge default configuration files sets by others apps.
 
 ### Sources List

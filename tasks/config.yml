@@ -11,6 +11,16 @@
   with_items:
     - "etc/apt/apt.conf.d/10periodic"
 
+- name: CONFIG dpkg
+  template:
+    src: "{{ item }}.j2"
+    dest: "/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - "etc/apt/apt.conf.d/20dpkg"
+
 - name: CONFIG purge default config
   file:
     path: "/etc/apt/apt.conf.d/{{ item }}"

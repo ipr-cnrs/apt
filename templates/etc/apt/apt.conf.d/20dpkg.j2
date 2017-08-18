@@ -1,0 +1,12 @@
+# {{ ansible_managed }}
+
+Dpkg
+{
+	Options
+	{
+		# keep the old version of configuration files without prompting
+		"--force-confold";
+		# let dpkg decide by itself when multiple choice
+		"--force-confdef";
+	}
+};
