@@ -9,9 +9,9 @@
     group: root
     mode: 0644
   with_items:
-    - "etc/apt/apt.conf.d/01autoremove"
-    - "etc/apt/apt.conf.d/10general"
-    - "etc/apt/apt.conf.d/10periodic"
+    - "etc/apt/apt.conf.d/01autoremove.conf"
+    - "etc/apt/apt.conf.d/10general.conf"
+    - "etc/apt/apt.conf.d/10periodic.conf"
 
 - name: CONFIG dpkg
   template:
@@ -21,7 +21,7 @@
     group: root
     mode: 0644
   with_items:
-    - "etc/apt/apt.conf.d/20dpkg"
+    - "etc/apt/apt.conf.d/20dpkg.conf"
 
 - name: CONFIG purge default config
   file:
