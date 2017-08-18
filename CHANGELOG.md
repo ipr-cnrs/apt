@@ -11,4 +11,4 @@
 * Ensure to never remove some packages pattern.
 * Manage general, periodic and dpkg config files.
 * Purge default configuration files sets by others apps.
-* Manage `unattended-upgrades`.
+* Manage `unattended-upgrades` (package and config).

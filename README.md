@@ -35,6 +35,7 @@ Manage APT repos, preferences and configuration for IPR's servers.
 * **apt_old_pkg_state** : State of old packages [default : `absent`].
 * **apt_old_pkg_manage** : If those old packages should be managed by the role [default : `true`].
 * **apt_unattended_upgrades** : If `unattended-upgrades` should be managed by the role [default : `yes`].
+* **apt_unattended_upgrades_blacklist** : List of packages to not update (regexp are supported) [default : `[]`].
 
 ## Example Playbook
 
@@ -49,11 +50,12 @@ Manage APT repos, preferences and configuration for IPR's servers.
 ## Configuration
 
 ### APT Configuration
-- Ensure to never remove some packages pattern.
-- Set general APT configurations.
-- Set periodic actions.
-- Set dpkg default values.
-- Purge default configuration files sets by others apps.
+* Ensure to never remove some packages pattern.
+* Set general APT configurations.
+* Set periodic actions.
+* Set dpkg default values.
+* Set unattended-upgrades config.
+* Purge default configuration files sets by others apps.
 
 ### Sources List
 Manage Debian's sources.list :

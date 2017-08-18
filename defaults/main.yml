@@ -36,3 +36,4 @@ apt_old_pkg_manage: true
 
 # unattended-upgrades
 apt_unattended_upgrades: yes
+apt_unattended_upgrades_blacklist: []

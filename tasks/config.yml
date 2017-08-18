@@ -23,6 +23,17 @@
   with_items:
     - "etc/apt/apt.conf.d/20dpkg.conf"
 
+- name: CONFIG unattended-upgrades
+  template:
+    src: "{{ item }}.j2"
+    dest: "/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - "etc/apt/apt.conf.d/50unattended-upgrades.conf"
+  when: apt_unattended_upgrades
+
 - name: CONFIG purge default config
   file:
     path: "/etc/apt/apt.conf.d/{{ item }}"
