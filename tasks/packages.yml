@@ -14,6 +14,7 @@
   apt:
     pkg: "unattended-upgrades"
     state: "{{ 'latest' if apt_unattended_upgrades else 'absent' }}"
+    update_cache: yes
   when: apt_unattended_upgrades
 
 - name: INSTALL purge useless packages

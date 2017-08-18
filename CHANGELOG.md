@@ -1,4 +1,9 @@
 
+## v1.0.1
+
+### Fix
+* Ensure to update cache before install unattended-upgrades.
+
 ## v1.0
 
 ### Features
