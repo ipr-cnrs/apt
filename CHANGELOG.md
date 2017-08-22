@@ -1,4 +1,9 @@
 
+## v1.0.2
+
+### Fix
+* Purge sources.list default file after setting up all new repositories…
+
 ## v1.0.1
 
 ### Fix
