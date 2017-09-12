@@ -14,6 +14,17 @@
   notify: aptitude update
   when: apt_src_list_manage and apt_stretch_manage
 
+- name: CONFIG stretch security sources.list
+  apt_repository:
+    repo: "{{ item }} http://httpredir.debian.org/debian-security/ stretch/updates main contrib non-free"
+    filename: stretch.security
+    update_cache: no
+  with_items:
+    - deb
+    - deb-src
+  notify: aptitude update
+  when: apt_src_list_manage and apt_stretch_manage
+
 - name: CONFIG stretch backports sources.list
   apt_repository:
     repo: "deb http://httpredir.debian.org/debian/ stretch-{{ item }} main contrib non-free"

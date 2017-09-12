@@ -59,7 +59,7 @@ Manage APT repos, preferences and configuration for IPR's servers.
 
 ### Sources List
 Manage Debian's sources.list :
-* Add Stretch repositories.
+* Add Stretch repositories (official, security and backports).
 * Remove the default `/etc/apt/sources.list` file.
 * Update Apt if any repositories modifications.
 

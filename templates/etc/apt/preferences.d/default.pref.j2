@@ -1,12 +1,17 @@
 # {{ ansible_managed }}
 
 {% if apt_stretch_manage %}
+Explanation: Packages from Stretch Security (Stable)
+Package: *
+Pin: release o=Debian,a=stable,n=stretch,l=Debian-Security
+Pin-Priority: 520
+
 Explanation: Packages from Stretch (Stable)
 Package: *
 Pin: release o=Debian,a=stable,n=stretch,l=Debian
 Pin-Priority: 510
 
-Explanation: Packages from Stretch (Stable)
+Explanation: Packages from Stretch Backports (Stable)
 Package: *
 Pin: release o=Debian Backports,a=stretch-backports,n=stretch-backports,l=Debian Backports
 Pin-Priority: 500

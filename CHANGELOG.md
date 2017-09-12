@@ -1,4 +1,9 @@
 
+## v1.0.x
+
+### Enhancements
+* Add Stretch-Security repository.
+
 ## v1.0.2
 
 ### Fix
