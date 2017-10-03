@@ -28,7 +28,7 @@ apt_tools_list:
   - aptitude
 apt_tools_state: 'installed'
 apt_tools_manage: true
-apt_old_pkg_list:
+apt_old_pkg_list:   # TODO: rename as apt_unwanted_pkg_list as 'old' doesn't seem to be appropriate here
   - laptop-detect
   - tasksel
 apt_old_pkg_state: 'absent'
