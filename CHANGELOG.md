@@ -3,6 +3,7 @@
 
 ### Enhancements
 * Add Stretch-Security repository.
+* Update README.md with example.
 
 ## v1.0.2
 

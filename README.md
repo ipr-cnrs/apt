@@ -47,6 +47,15 @@ Manage APT repos, preferences and configuration for IPR's servers.
     - role: ipr-cnrs.apt
 ```
 
+* For a system with an X session, you may let the old packages unmanaged :
+
+``` yml
+- hosts: serverXYZ
+  roles:
+    - role: ipr-cnrs.apt
+      apt_old_pkg_manage: false
+```
+
 ## Configuration
 
 ### APT Configuration
@@ -59,7 +68,7 @@ Manage APT repos, preferences and configuration for IPR's servers.
 
 ### Sources List
 Manage Debian's sources.list :
-* Add Stretch repositories (official, security and backports).
+* Add Stretch repositories (main, security and backports).
 * Remove the default `/etc/apt/sources.list` file.
 * Update Apt if any repositories modifications.
 
