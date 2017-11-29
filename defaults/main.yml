@@ -30,11 +30,11 @@ apt_tools_list:
   - aptitude
 apt_tools_state: 'installed'
 apt_tools_manage: true
-apt_old_pkg_list:   # TODO: rename as apt_unwanted_pkg_list as 'old' doesn't seem to be appropriate here
+apt_unwanted_pkg_list:
   - laptop-detect
   - tasksel
-apt_old_pkg_state: 'absent'
-apt_old_pkg_manage: true
+apt_unwanted_pkg_state: 'absent'
+apt_unwanted_pkg_manage: true
 
 # unattended-upgrades
 apt_unattended_upgrades: yes

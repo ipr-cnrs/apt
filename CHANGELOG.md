@@ -4,6 +4,7 @@
 ### Enhancements
 * Add Stretch-Security repository.
 * Update README.md with example.
+* Rename apt_old_* to apt_unwanted_* vars.
 
 ## v1.0.2
 

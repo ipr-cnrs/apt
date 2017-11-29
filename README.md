@@ -31,9 +31,9 @@ Manage APT repos, preferences and configuration for IPR's servers.
 * **apt_tools_list** : The list of additionnals tools to install [default [see below](#tools)].
 * **apt_tools_state** : State of new tools [default : `installed`].
 * **apt_tools_manage** : If those tools should be managed by the role [default : `true`].
-* **apt_old_pkg_list** : The list of totally useless packages for a production server [default [see below](#tools)].
-* **apt_old_pkg_state** : State of old packages [default : `absent`].
-* **apt_old_pkg_manage** : If those old packages should be managed by the role [default : `true`].
+* **apt_unwanted_pkg_list** : The list of totally useless packages for a production server [default [see below](#tools)].
+* **apt_unwanted_pkg_state** : State of old packages [default : `absent`].
+* **apt_unwanted_pkg_manage** : If those old packages should be managed by the role [default : `true`].
 * **apt_unattended_upgrades** : If `unattended-upgrades` should be managed by the role [default : `yes`].
 * **apt_unattended_upgrades_blacklist** : List of packages to not update (regexp are supported) [default : `[]`].
 
@@ -53,7 +53,7 @@ Manage APT repos, preferences and configuration for IPR's servers.
 - hosts: serverXYZ
   roles:
     - role: ipr-cnrs.apt
-      apt_old_pkg_manage: false
+      apt_unwanted_pkg_manage: false
 ```
 
 ## Configuration

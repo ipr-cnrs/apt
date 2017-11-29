@@ -20,7 +20,7 @@
 - name: INSTALL purge useless packages
   apt:
     name: '{{ item }}'
-    state: '{{ apt_old_pkg_state }}'
+    state: '{{ apt_unwanted_pkg_state }}'
   with_items:
-    - '{{ apt_old_pkg_list }}'
-  when: apt_old_pkg_manage
+    - '{{ apt_unwanted_pkg_list }}'
+  when: apt_unwanted_pkg_manage
