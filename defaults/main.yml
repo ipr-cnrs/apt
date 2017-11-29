@@ -7,9 +7,11 @@ apt_conf_download_upgradeable_pkg: 1
 apt_conf_auto_clean_interval: 0
 apt_conf_purge_list:
   - 00trustcdrom
+  - 01autoremove
   - 15hobbit-plugins-update-stamp
   - 20auto-upgrades
   - 20listchanges
+  - 50unattended-upgrades
   - 70debconf
 apt_conf_purge_manage: true
 
