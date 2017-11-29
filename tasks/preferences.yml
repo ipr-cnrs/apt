@@ -2,7 +2,7 @@
 # task file for preferences
 
 # Default preferences file
-- name: CONFIG default preferences
+- name: PREF default preferences file
   template:
     src: '{{ apt_default_pref_tpl }}'
     dest: '{{ apt_default_pref_path }}'
