@@ -6,3 +6,10 @@
   template:
     src: '{{ apt_default_pref_tpl }}'
     dest: '{{ apt_default_pref_path }}'
+
+# Proxmox preferences file
+- name: PREF Proxmox preferences file
+  template:
+    src: '{{ apt_proxmox_pref_tpl }}'
+    dest: '{{ apt_proxmox_pref_path }}'
+  when: apt_proxmox_manage

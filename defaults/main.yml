@@ -39,3 +39,8 @@ apt_unwanted_pkg_manage: true
 # unattended-upgrades
 apt_unattended_upgrades: yes
 apt_unattended_upgrades_blacklist: []
+
+# proxmox
+apt_proxmox_manage: false
+apt_proxmox_pref_path: '/etc/apt/preferences.d/proxmox.pref'
+apt_proxmox_pref_tpl: 'etc/apt/preferences.d/proxmox.pref.j2'

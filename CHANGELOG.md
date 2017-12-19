@@ -6,6 +6,7 @@
 * Update README.md with example.
 * Rename apt_old_* to apt_unwanted_* vars.
 * Fix tasks name.
+* Add possibility to define APT preferences for Proxmox reposity.
 
 ## v1.0.2
 
