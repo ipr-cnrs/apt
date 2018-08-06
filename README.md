@@ -1,5 +1,7 @@
 # Apt
 
+This role is **NO LONGER SUPPORTED**, please take a look to [debops.apt][debops doc apt], [debops.apt_install][debops doc apt_install], [debops.apt_preferences][debops doc apt_preferences] and all others [DebOps apt_* roles][debops doc apt roles].
+
 1. [Overview](#overview)
 2. [Role Variables](#role-variables)
 3. [Example Playbook](#example-playbook)
@@ -108,3 +110,7 @@ Jérémy Gardais
 [apt github]: https://github.com/ipr-cnrs/apt
 [wtfpl website]: http://www.wtfpl.net/about/
 [ipr website]: https://ipr.univ-rennes1.fr/
+[debops doc apt_install]: https://docs.debops.org/en/master/ansible/roles/debops.apt_install/index.html
+[debops doc apt]: https://docs.debops.org/en/master/ansible/roles/debops.apt/index.html
+[debops doc apt_preferences]: https://docs.debops.org/en/master/ansible/roles/debops.apt_preferences/index.html
+[debops doc apt roles]: https://docs.debops.org/en/master/search.html?q=debops.apt_&check_keywords=yes

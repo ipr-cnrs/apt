@@ -1,3 +1,4 @@
+This role is **NO LONGER SUPPORTED**, please take a look to [debops.apt][debops doc apt], [debops.apt_install][debops doc apt_install], [debops.apt_preferences][debops doc apt_preferences] and all others [DebOps apt_* roles][debops doc apt roles].
 
 ## v1.1
 
